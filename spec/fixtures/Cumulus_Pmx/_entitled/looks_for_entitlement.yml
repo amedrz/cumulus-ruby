@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-cumulus.com/pemex/derecho_habiente
+    body:
+      encoding: UTF-8
+      string: '{"numeroEmpresa":"123","numeroEmpleado":"123","codigoDerechoHabiente":"0"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Token dbac7b7bfe68ace99d028618b986fbf4a4b4d474
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Server:
+      - gunicorn/19.4.1
+      Date:
+      - Sun, 27 Dec 2015 23:21:13 GMT
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept
+      Allow:
+      - POST, OPTIONS
+      Content-Type:
+      - application/json
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"derechoHabiente":true,"pemex":{"id":1,"ficha":"135739","centro":"110","departamento":"78150","organismo":"CORPORATIVO","sexo":"M","edad":"64","nombre":"J
+        JESUS DANIEL MENDOZA QUINTANA","estatus":"VIGENTE","unidadMedica":"CONSULTORIO
+        SALTILLO","regimen":"PC","folio":"1962384","fecha":"2015-12-10","hora":"11:37:00"},"localidad":"Localidad
+        01"}'
+    http_version: 
+  recorded_at: Sun, 27 Dec 2015 23:21:13 GMT
+recorded_with: VCR 3.0.1
