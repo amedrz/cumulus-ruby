@@ -2,20 +2,30 @@
 
 A Ruby wrapper for the Cumulus API.
 
+You should access the Cumulus API documentation in order to learn more about the
+request/response parameters for each endpoint.
+
 ## Installation
 
 ```
 $ gem install cumulus_ruby
 ```
 
+Or if you are using Bundler, add
+
+````
+gem 'cumulus_ruby'
+```
+
 ## API Usage Examples
 
 You will need to get an access token. Once you have it, initialize the client
-to make authenticated further calls.
+to make authenticated calls.
 
 ```ruby
-# initializing the client
-client = Cumulus::Client.new(token: 'access-token')
+require 'cumulus'
+
+client = Cumulus::Client.new(token: '<redacted>', url: '<redacted>')
 ```
 
 ### Patients

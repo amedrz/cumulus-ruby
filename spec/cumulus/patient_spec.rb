@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'securerandom'
 
 RSpec.describe Cumulus::Patient do
-  let(:client) { Cumulus::Client.new(token: TOKEN) }
+  let(:client) { Cumulus::Client.new(token: TOKEN, url: URL) }
   let(:attributes) do
     { first_name: 'Jhon', middle_name: 'Doe', curp: SecureRandom.hex(5) }
   end

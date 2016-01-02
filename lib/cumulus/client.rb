@@ -1,15 +1,13 @@
 require 'faraday'
-require 'logger'
 require 'faraday_middleware'
 
 module Cumulus
   class Client
-    attr_accessor :request
-
-    API_URL = 'https://api-cumulus.com'
+    attr_accessor :request, :url
 
     def initialize(options={})
       @token = options[:token]
+      @url = options[:url]
     end
 
     def request(type, path, params={})
@@ -51,8 +49,12 @@ module Cumulus
       @token
     end
 
+    def url
+      @url
+    end
+
     def connection
-      @connection ||= Faraday.new(url: Cumulus::Client::API_URL) do |b|
+      @connection ||= Faraday.new(url: url) do |b|
         b.adapter Faraday.default_adapter
         b.use FaradayMiddleware::ParseJson
       end

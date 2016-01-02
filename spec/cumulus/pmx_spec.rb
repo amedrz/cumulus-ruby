@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Cumulus::Pmx do
-  let(:client) { Cumulus::Client.new(token: TOKEN) }
+  let(:client) { Cumulus::Client.new(token: TOKEN, url: URL) }
   let(:pmx) { Cumulus::Pmx.new(client) }
 
   describe '#companies' do

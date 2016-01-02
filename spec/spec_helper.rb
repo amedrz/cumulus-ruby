@@ -5,6 +5,7 @@ require 'vcr'
 require 'pry'
 
 TOKEN = 'dbac7b7bfe68'
+URL = 'https://api-cumulus.com'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures'
