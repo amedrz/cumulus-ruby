@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-cumulus.com/pemex/empresa
+    uri: https://api-cumulus.com/pemex/empleados
     body:
       encoding: UTF-8
-      string: '{"numeroEmpleado":"123"}'
+      string: '{"numeroEmpleado":"123","numeroEmpresa":"123"}'
     headers:
       User-Agent:
       - Faraday v0.9.2
@@ -40,7 +40,9 @@ http_interactions:
       - SAMEORIGIN
     body:
       encoding: UTF-8
-      string: '[{"empresa":"Sin definir","nombre":"Mohammed Yassine Jarabo","numeroEmpresa":"123","numeroEmpleado":"123","codigoDerechoHabiente":"0"}]'
+      string: '[{"localidad":"Localidad 01","derechoHabiente":true,"pemex":{"fecha":"2016-1-5","sexo":"H","departamento":"78150","centro":"110","nombre":"Mohammed
+        Yassine Jarabo","ficha":"123","hora":"21:38:58","folio":"1962384","edad":"77","organismo":"Sin
+        definir","estatus":"VIGENTE","unidadMedica":"CONSULTORIO SALTILLO","regimen":"PC"}}]'
     http_version:
   recorded_at: Tue, 05 Jan 2016 21:38:18 GMT
 recorded_with: VCR 3.0.1

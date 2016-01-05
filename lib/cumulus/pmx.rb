@@ -8,6 +8,10 @@ module Cumulus
       client.request(:post, '/pemex/empresa', params)
     end
 
+    def employees(params)
+      client.request(:post, '/pemex/empleados', params)
+    end
+
     def entitled(params)
       client.request(:post, '/pemex/derecho_habiente', params)
     end

@@ -13,6 +13,16 @@ RSpec.describe Cumulus::Pmx do
     end
   end
 
+  describe '#employees' do
+    it 'looks for employees', :vcr do
+      response = pmx.employees({ 'numeroEmpleado' => '123',
+        'numeroEmpresa' => '123' })
+
+      expect(response[0].keys).to match_array(['pemex', 'derechoHabiente',
+        'localidad'])
+    end
+  end
+
   describe '#entitled' do
     it 'looks for entitlement', :vcr do
       response = pmx.entitled({ 'numeroEmpresa' => '123',
