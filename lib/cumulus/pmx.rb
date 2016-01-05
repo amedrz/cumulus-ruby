@@ -4,8 +4,8 @@ module Cumulus
       @client = client
     end
 
-    def companies(params)
-      client.request(:post, '/pemex/empresa', params)
+    def companies
+      client.request(:get, '/pemex/empresas')
     end
 
     def employees(params)

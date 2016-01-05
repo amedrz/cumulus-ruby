@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - gunicorn/19.4.5
       Date:
-      - Tue, 05 Jan 2016 21:38:58 GMT
+      - Tue, 05 Jan 2016 22:32:55 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"localidad":"Localidad 03","derechoHabiente":true,"pemex":{"ficha":"123","centro":"110","departamento":"78150","organismo":"Sin
         definir","sexo":"H","edad":"77","nombre":"Mohammed Yassine Jarabo","estatus":"VIGENTE","unidadMedica":"CONSULTORIO
-        SALTILLO","regimen":"PC","folio":"1962384","fecha":"2016-1-5","hora":"21:38:58"}}'
+        SALTILLO","regimen":"PC","folio":"1962384","fecha":"2016-1-5","hora":"22:29:55"}}'
     http_version:
-  recorded_at: Tue, 05 Jan 2016 21:38:18 GMT
+  recorded_at: Tue, 05 Jan 2016 22:32:15 GMT
 recorded_with: VCR 3.0.1

@@ -6,10 +6,9 @@ RSpec.describe Cumulus::Pmx do
 
   describe '#companies' do
     it 'looks for companies', :vcr do
-      response = pmx.companies({ 'numeroEmpleado' => '123' })
+      response = pmx.companies
 
-      expect(response[0].keys).to match_array(['numeroEmpresa',
-        'numeroEmpleado', 'codigoDerechoHabiente', 'empresa', 'nombre'])
+      expect(response[0].keys).to match_array(['empresa', 'numeroEmpresa'])
     end
   end
 
