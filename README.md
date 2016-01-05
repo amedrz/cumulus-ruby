@@ -68,7 +68,7 @@ pmx = Cumulus::Pmx.new(client)
 Look for companies
 
 ```ruby
-pmx.companies({ 'numeroEmpleado' => '123' })
+pmx.companies
 ```
 
 Look for entitlement
@@ -78,11 +78,11 @@ pmx.entitled({ 'numeroEmpresa' => '123',
   'numeroEmpleado' => '123', 'codigoDerechoHabiente' => '0' })
 ```
 
-Look for a patient
+Look for employee
 
 ```ruby
-pmx.patient({ 'numeroEmpresa' => '123',
-  'numeroEmpleado' => '123', 'codigoDerechoHabiente' => '0' })
+pmx.employee({ 'numeroEmpresa' => '123',
+  'numeroEmpleado' => '123' })
 ```
 
 ## License
