@@ -65,24 +65,51 @@ patient.search(other_patient.curp, { query: 'foo' })
 pmx = Cumulus::Pmx.new(client)
 ```
 
-Look for companies
+Fetch Pemex companies
 
 ```ruby
-pmx.companies
+pmx.fetch_companies
 ```
 
-Look for entitlement
+Fetch Pemex employees
 
 ```ruby
-pmx.entitled({ 'numeroEmpresa' => '123',
-  'numeroEmpleado' => '123', 'codigoDerechoHabiente' => '0' })
+pmx.fetch_employees({
+  'numeroEmpresa' => '123',
+  'numeroEmpleado' => '123'
+})
 ```
 
-Look for employee
+Fetch Pemex entitled
 
 ```ruby
-pmx.employee({ 'numeroEmpresa' => '123',
-  'numeroEmpleado' => '123' })
+pmx.fetch_entitled({
+  'numeroEmpresa' => '123',
+  'numeroEmpleado' => '123',
+  'codigoDerechoHabiente' => '0'
+})
+```
+
+Fetch patient by Pemex
+
+```ruby
+pmx.fetch_patient({
+  'numeroEmpresa' => '123',
+  'numeroEmpleado' => '123',
+  'codigoDerechoHabiente' => '0'
+})
+```
+
+Link patient to Pemex
+
+```ruby
+pmx.link_patient('AMED123123', {
+  'numeroEmpresa' => '123',
+  'numeroEmpleado' => '124',
+  'codigoDerechoHabiente' => '0',
+  'localidad' => 'Localidad 01',
+  'derechoHabiente' => false
+})
 ```
 
 ## License
