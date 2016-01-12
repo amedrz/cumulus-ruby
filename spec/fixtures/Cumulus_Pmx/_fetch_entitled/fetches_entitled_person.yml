@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-cumulus.com/pemex/derecho_habiente
+    body:
+      encoding: UTF-8
+      string: '{"numeroEmpresa":"10","numeroEmpleado":"123","codigoDerechoHabiente":"0"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Token 7bdc44b3414fe6922ed9cb237f393427668b0745
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - gunicorn/19.4.5
+      Date:
+      - Tue, 12 Jan 2016 19:06:45 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept
+      Allow:
+      - OPTIONS, POST
+    body:
+      encoding: UTF-8
+      string: '{"localidad":"Localidad 03","pemex":{"ficha":"123","centro":"110","departamento":"78150","organismo":"PEMEX
+        DEMO 1","sexo":"H","edad":"33","nombre":"Kevin Charles Villamiel","estatus":"VIGENTE","unidadMedica":"CONSULTORIO
+        SALTILLO","regimen":"PC","folio":"1962384","fecha":"2016-1-12","hora":"18:37:54"},"derechoHabiente":true}'
+    http_version:
+  recorded_at: Tue, 12 Jan 2016 19:06:34 GMT
+recorded_with: VCR 3.0.1

@@ -4,23 +4,28 @@ module Cumulus
       @client = client
     end
 
-    def companies
+    def fetch_companies
       client.request(:get, '/pemex/empresas')
     end
 
-    def employees(params)
+    def fetch_employees(params)
       client.request(:post, '/pemex/empleados', params)
     end
 
-    def entitled(params)
+    def fetch_entitled(params)
       client.request(:post, '/pemex/derecho_habiente', params)
     end
 
-    def patient(params)
+    def fetch_patient(params)
       client.request(:post, '/pemex/paciente', params)
     end
 
+    def link_patient(curp, params)
+      client.request(:post, "/pacientes/#{curp}/pemex", params)
+    end
+
     private
+
     def client
       @client
     end

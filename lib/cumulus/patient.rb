@@ -44,6 +44,7 @@ module Cumulus
     end
 
     private
+
     def client
       @client
     end

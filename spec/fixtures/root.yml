@@ -41,6 +41,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"routes":["http://api-cumulus.herokuapp.com/auth/login","http://api-cumulus.herokuapp.com/apps/token","http://api-cumulus.herokuapp.com/pacientes","http://api-cumulus.herokuapp.com/pacientes/{curp}/","http://api-cumulus.herokuapp.com/pacientes/{curp}/busqueda","http://api-cumulus.herokuapp.com/pacientes/{curp}/medicamentos","http://api-cumulus.herokuapp.com/pacientes/{curp}/alergias","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}/diagnosticos","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}/cuestionarios","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}/intervenciones","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}/recetas","http://api-cumulus.herokuapp.com/pacientes/{curp}/eventos/{evento_id}/tomas_signos"]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 24 Dec 2015 22:13:38 GMT
 recorded_with: VCR 3.0.1

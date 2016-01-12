@@ -2,10 +2,11 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-cumulus.com/pemex/empleados
+    uri: https://api-cumulus.com/pacientes/AMED123123/pemex
     body:
       encoding: UTF-8
-      string: '{"numeroEmpleado":"123","numeroEmpresa":"123"}'
+      string: '{"numeroEmpresa":"123","numeroEmpleado":"124","codigoDerechoHabiente":"0","localidad":"Localidad
+        01","derechoHabiente":false}'
     headers:
       User-Agent:
       - Faraday v0.9.2
@@ -19,30 +20,28 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: CREATED
     headers:
       Server:
       - gunicorn/19.4.5
       Date:
-      - Tue, 05 Jan 2016 22:32:55 GMT
+      - Tue, 12 Jan 2016 19:06:45 GMT
       Connection:
       - close
       Transfer-Encoding:
       - chunked
       Content-Type:
       - application/json
-      Allow:
-      - POST, OPTIONS
-      Vary:
-      - Accept
       X-Frame-Options:
       - SAMEORIGIN
+      Vary:
+      - Accept
+      Allow:
+      - GET, POST, HEAD, OPTIONS
     body:
       encoding: UTF-8
-      string: '[{"localidad":"Localidad 03","derechoHabiente":true,"pemex":{"ficha":"123","centro":"110","departamento":"78150","organismo":"Sin
-        definir","sexo":"H","edad":"77","nombre":"Mohammed Yassine Jarabo","estatus":"VIGENTE","unidadMedica":"CONSULTORIO
-        SALTILLO","regimen":"PC","folio":"1962384","fecha":"2016-1-5","hora":"22:29:55"}}]'
+      string: '{"msj":"Datos de Pemex Agregados","id":3821,"url":"http://69.16.245.56:8000/pacientes/AMED123123/pemex"}'
     http_version:
-  recorded_at: Tue, 05 Jan 2016 22:32:14 GMT
+  recorded_at: Tue, 12 Jan 2016 19:06:34 GMT
 recorded_with: VCR 3.0.1
