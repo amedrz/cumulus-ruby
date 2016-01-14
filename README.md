@@ -100,6 +100,12 @@ pmx.fetch_patient({
 })
 ```
 
+Fetch patient by CURP
+
+```ruby
+pmx.fetch_patient_by_curp('SIFU123123')
+```
+
 Link patient to Pemex
 
 ```ruby

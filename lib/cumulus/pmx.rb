@@ -20,6 +20,10 @@ module Cumulus
       client.request(:post, '/pemex/paciente', params)
     end
 
+    def fetch_patient_by_curp(curp)
+      client.request(:get, "/pacientes/#{curp}/pemex")
+    end
+
     def link_patient(curp, params)
       client.request(:post, "/pacientes/#{curp}/pemex", params)
     end

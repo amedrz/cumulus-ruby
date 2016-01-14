@@ -48,11 +48,19 @@ RSpec.describe Cumulus::Pmx do
     end
   end
 
+  describe '#fecth_patient_by_curp' do
+    it 'fetches patient by curp', :vcr do
+      response = pmx.fetch_patient_by_curp('AMED123123')
+
+      expect(response).to have_key('curp')
+    end
+  end
+
   describe '#link_patient' do
     it 'links a patient with pemex entitlement', :vcr do
-      response = pmx.link_patient('AMED123123', {
+      response = pmx.link_patient('SIFU123123', {
           'numeroEmpresa' => '123',
-          'numeroEmpleado' => '124',
+          'numeroEmpleado' => '125',
           'codigoDerechoHabiente' => '0',
           'localidad' => 'Localidad 01',
           'derechoHabiente' => false
