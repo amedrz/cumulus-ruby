@@ -20,6 +20,10 @@ module Cumulus
 
     PARAMETERS.keys.each { |k| attr_accessor k }
 
+    def self.fetch(client, curp)
+      client.request(:get, "/pacientes/#{curp}")
+    end
+
     def initialize(client, parameters={})
       @client = client
       parameters_handler.set(parameters)
@@ -33,10 +37,6 @@ module Cumulus
     def update(parameters={})
       parameters_handler.set(parameters)
       client.request(:put, "/pacientes/#{curp}", parameters_handler.for_request)
-    end
-
-    def fetch(curp)
-      client.request(:get, "/pacientes/#{curp}")
     end
 
     def search(curp, query)

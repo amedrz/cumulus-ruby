@@ -42,13 +42,9 @@ RSpec.describe Cumulus::Patient do
     end
   end
 
-  describe '#fetch' do
-    let(:patient) { Cumulus::Patient.new(client, attributes) }
-
+  describe '.fetch' do
     it 'fetches a patient', vcr: { match_requests_on: [:method] } do
-      patient.create
-
-      response = patient.fetch(patient.curp)
+      response = Cumulus::Patient.fetch(client, attributes[:curp])
 
       expect(response).to have_key('id')
     end

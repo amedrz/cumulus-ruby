@@ -50,7 +50,7 @@ patient.update(first_name: 'Mike')
 Fetch a patient.
 
 ```ruby
-patient.fetch(other_patient.curp)
+patient = Cumulus::Patient.fetch(client, patient.curp)
 ```
 
 Search patient info.
