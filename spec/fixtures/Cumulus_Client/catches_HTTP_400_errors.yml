@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://69.16.245.56:8001/pacientes
+    body:
+      encoding: UTF-8
+      string: '{"nombre":"Jhon","apellido":"Doe"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Token adbf031a6eea61c7c6f65c63d53da19ded7d9558
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Server:
+      - gunicorn/19.4.5
+      Date:
+      - Fri, 29 Jan 2016 01:37:23 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Allow:
+      - POST, OPTIONS
+      Content-Type:
+      - application/json
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept
+    body:
+      encoding: UTF-8
+      string: '{"msj":"Error en los datos","errores":{"curp":["This field is required."]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 01:37:23 GMT
+recorded_with: VCR 3.0.1
